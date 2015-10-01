@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Petshop Page - Documentation</title>
+    <meta name="viewport" content="width=devpetshop-width, initial-scale=1.0">
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,800italic,400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Style Sheet-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/lightbox.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/favicon.png" >
+</head>
+
+<body>
+    <div class="container-fluid main-container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-3 col-sm-4 sidebar-wrapper">
+                <div class="sidebar-inner-wrapper">
+
+                    <div class="title-area">
+                        <h1 class="site-title"><a href="index.html">Petshop</a></h1>
+                        <a href="http://themeforest.net/user/mustachethemes?ref=mustachethemes"><img src="images/logo.png" alt="Petshop"></a>
+                    </div>
+
+                    <nav class="nav-main" id="nav" role="navigation">
+                        <ul class="main-menu">
+                            <li>
+                                <a href="#" class="menu-item">
+                                    <span class="main-menu-item">
+                                        <i class="glyphicon glyphicon-cog"></i>General<span class="glyphicon glyphicon-chevron-right"></span>
+                                    </span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a class="sub-menu-item" href="#introduction">Introduction</a></li>
+                                    <li><a class="sub-menu-item" href="#tips">Tips</a></li>
+                                    <li><a class="sub-menu-item" href="#installation">Installation</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-item">
+                                    <span class="main-menu-item">
+                                        <i class="glyphicon glyphicon-file"></i>Structure<span class="glyphicon glyphicon-chevron-right"></span>
+                                    </span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a class="sub-menu-item" href="#structure">Files</a></li>
+                                    <li><a class="sub-menu-item" href="#html_structure">HTML Structure</a></li>
+                                    <li><a class="sub-menu-item" href="#css_structure">CSS Structure</a></li>
+                                    <li><a class="sub-menu-item" href="#js_structure">JS Structure</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-item">
+                                    <span class="main-menu-item">
+                                        <i class="glyphicon glyphicon-pencil"></i>Edition<span class="glyphicon glyphicon-chevron-right"></span>
+                                    </span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a class="sub-menu-item" href="#edition">Edition</a></li>
+                                    <li><a class="sub-menu-item" href="#resources">Resources</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#" class="menu-item">
+                                    <span class="main-menu-item">
+                                        <i class="glyphicon glyphicon-comment"></i>Support<span class="glyphicon glyphicon-chevron-right"></span>
+                                    </span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a class="sub-menu-item" href="#support-forum">Forum</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div><!-- inner wrapper -->
+            </div><!-- sidebar wrapper -->
+
+
+            <!-- Main -->
+            <div class="col-lg-9 col-md-8 col-sm-7">
+
+                <main class="page-content"  role="main">
+                
+                    <!-- Basic Setup -->
+                    <article class="hentry" id="introduction">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Introduction</h1>
+                            
+                            <p>Thank you for purchasing <strong>Petshop</strong>. If you have any question that is beyond the scope of this documentation, please feel free to create a support ticket using <a href="https://mustachethemes.ticksy.com/" target="_blank">Our Support Site</a></p>
+                            <p>Read the <a href="https://mustachethemes.ticksy.com/articles/" target="_blank">articles</a> and serch for your answer before creating a new ticket.</p>
+                            <p class="bg-warning text-warning">
+                                <strong>Disclaimer:</strong><br/> We offer limited support for theme customers. We only provide support for our themes/ templates and their core features. Customization is not included in our FREE Support.</p>
+                            <br />
+                            <p>If you like this theme, Please support us by <strong>rating this theme with 5 stars (<a data-lightbox="how-to-rate-theme" href="images/how-to-rate-theme.png" >How to rate?</a>)</strong>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                                <i class="glyphicon glyphicon-star"></i>
+                            </p>
+                        </div>
+					</article>
+
+                    <!-- Tips -->
+                    <article class="hentry" id="tips">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Tips</h1>
+                                <p>USE FIREBUG or Chrome DEVELOPER TOOLS!</p>
+                                <p> I am not going to tell you about when i discovered this great tool, or&nbsp;necessarily why i like it and so on.&nbsp;I&#39;m actually going to push you into using it :) I mean it, you can&#39;t be a serious developer unless you&#39;re using it.</p>
+                                <h3>Scenarios:</h3>
+                                <ul>
+                                <li> You want to change the size/color/etc of a certain font and search into 3 stylesheets with 1000 lines each and you can find that damn rule which contains the property</li>
+                                <li> You want to get rid of an ugly space somewhere</li>
+                                <li> Some block has some absolute position and overlays another block</li>
+                                <li> You want to inspect an element to see if it has some sort of margin padding etc.</li>
+                                <li> And etc. etc.</li>
+                                </ul>
+                                <p> Mainly (for me), Firebug is about tracking the css code and to debug a website seeing the actual final (generated code). This tool is about productivity, you want to make things quicker - you should have it; you want to make things better - you should have it; you want to learn more and more - YOU SHOULD HAVE IT.</p>
+                                <p> Now, <strong>Firebug</strong> is petshop for <strong>Mozilla Firefox</strong>, you can find it <a href="https://addons.mozilla.org/ro/firefox/addon/firebug/" rel="nofollow" target="_blank">here</a></p>
+                                <p> For those of you who are using different browsers you already have some builtin tools:&nbsp;<a href="http://blog.chromium.org/2009/06/developer-tools-for-google-chrome.html" target="_blank">Chrome</a>&nbsp;/&nbsp;<a href="http://developer.apple.com/technologies/safari/developer-tools.html" rel="nofollow" target="_blank">Safari</a>&nbsp;/&nbsp;<a href="http://dev.opera.com/tools/" rel="nofollow" target="_blank">Opera</a>/<a href="http://www.microsoft.com/download/en/details.aspx?id=18359" rel="nofollow" target="_blank">Internet Explorer</a></p>
+                                <p> Instead of making huge tutorials about Firebug here, i will point you some great links so you can easily learn it:</p>
+                                <ul>
+                                <li> <a href="http://www.youtube.com/watch?v=FsX6qwQqGgQ" rel="nofollow" target="_blank">Introduction to CSS editing using Firebug</a></li>
+                                <li> <a href="http://www.youtube.com/watch?v=sHbYpl1XFiM&amp;feature=related" rel="nofollow" target="_blank">Firebug tutorial - Inspect HTML and CSS</a></li>
+                                <li> <a href="http://net.tutsplus.com/tutorials/other/10-reasons-why-you-should-be-using-firebug/" rel="nofollow" target="_blank">10 Reasons Why You Should Be Using Firebug</a></li>
+                                </ul>
+                                <p>Please ENJOY!</p>
+                        </div>
+                    </article>
+                    <!-- /Tips -->
+
+                    <!-- Installation -->
+                    <article class="hentry" id="installation">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Installation</h1>
+                            <p> You can view this template in any web browser from your desktop computer. Because the files are written in HTML, you do not need an internet connection in order to display or edit the template.</p>
+                            <p>All of the HTML files are given a descriptive name to make it easier to distingish what each file will display.</p>
+                            <h4>Upload to The Server</h4>
+                            <ol>
+                            <li>It's important to understand that you must either have your own server space or use someone elses. The server space can be purchased at many different places around the internet. You need somewhere to put the files that you purchased so others can find them online.</li>
+                            <li>Select /html folder and then choose the layout you want. After you choose, there will have several files with the extension labeled .html. This is where all your content will. In addition to .html you should see a file labeled .css. .css files are going to be the files that will tell the .html how to to be styled. CSS is simply a way to take text, images, and other elements and change the look of them. It's very important to keep the .css file with the HTML or the HTML will not look how the design is meant to look. Along with the HTML and CSS files, you will also have three additional folders to upload; css, images, and js.</li>
+                            <li>Start your FTP client (I persoanlly use <a href="https://filezilla-project.org/" target="_blank">Filezilla</a> which is free) and login. Login to your server. You will need your server name (often times this will be your domain name), username, and password that you setup with the hosting company.</li>
+                            <p><img src="petshop/filezilla.jpg" alt="Filezilla preview image"></p>
+                            <li>Locate the domain folder you wish to upload your template files to on your server. You are going to want to click and drag every file that you have labeled .html, .css, .js into your FTP client.</li>
+                            <p><img src="petshop/filezilla-example.jpg" alt="Filezilla preview image"></p>
+                            <li>Once the files are done uploading, you can try access your website via browser.</li>
+                            </ol>
+                        </div>
+                    </article>
+                    <!-- /Installation -->
+
+                    <!-- Structure -->
+                    <article class="hentry" id="structure">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Files Structure</h1>
+                            <p>Within the download you will find the following file structure, logically grouping common assets. </p>
+                            <p>When you open the folder of the Template, you will see something like this:</p>
+                            <img src="petshop/files.png" alt="files">
+                        </div>
+                    </article>
+                    <!-- /Structure -->
+
+                    <!-- HTML -->
+                    <article class="hentry" id="html_structure">
+                        <div class="entry-content">
+                            <h1 class="entry-title">HTML Structure</h1>
+                            <p> In this template I used as a framework: BOOTSTRAP Framework. You can take a look <a href="http://getbootstrap.com/" target="_blank">here</a> and see it´s awesome feature in action</p>
+                            <p> I mostly kept the generic styles, resets &amp; grid.&nbsp;</p>
+                            <p> So as a short description, the grid is composed by 12 columns, named like &quot;col-*-1&quot;, &quot;col-*-2&quot;, &quot;col-*-3&quot;....&quot;col-*-12&quot;. The span div&#39;s should be placed in rows and the rows in a container.</p>
+                            <p> A basic layout of the grids look like:</p>
+<pre class="brush: html">
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-*-5&quot;&gt; 5 Columns &lt;/div&gt;
+&lt;div class=&quot;col-*-3&quot;&gt; 3 Columns &lt;/div&gt;
+&lt;div class=&quot;col-*-4&quot;&gt; 4 Columns &lt;/div&gt;
+&lt;div class=&quot;col-*-13&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;col-*-6&quot;&gt; 6 columns  &lt;/div&gt;
+&lt;div class=&quot;col-*-6&quot;&gt; 6 columns  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</pre>
+                            <img src="petshop/html.png">
+                        </div>
+                    </article>
+                    <!-- /HTML -->
+
+
+                    <!-- CSS -->
+                    <article class="hentry" id="css_structure">
+                        <div class="entry-content">
+                            <h1 class="entry-title">CSS Structure</h1>
+                            <p>I am using several CSS files in this template:</p>
+                            <pre class="prettyprint lang-html linenums">
+html
+L-- css/
+&brvbar;    L-- bootstrap.min.css
+&brvbar;    L-- datepicker.css
+&brvbar;    L-- fontello-codes.css
+&brvbar;    L-- fontello-embedded.css
+&brvbar;    L-- fontello-ie7-codes.css
+&brvbar;    L-- fontello-ie7.css
+&brvbar;    L-- fontello.css
+&brvbar;    L-- media-queries.css
+&brvbar;    L-- slider.css
+&brvbar;    L-- style.css - this is the main css file, it contains all the styles of the website
+                            </pre>  
+                             <p>Example of css code organization:</p>
+                            <img src="petshop/css.png" alt="css">     
+                        </div>
+                    </article>
+                    <!-- /CSS -->
+
+                    <!-- JS -->
+                    <article class="hentry" id="js_structure">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Javascript Structure</h1>
+                            <p> This template use several JS files.</p>                           
+                                                         
+                            <img src="petshop/javascript.png" alt="js">
+                        </div>
+                    </article>
+                    <!-- /JS -->
+
+                    <!-- Edition -->
+                    <article class="hentry" id="edition">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Edition</h1>
+							<a href="http://youtu.be/PF2hico9CYE" target="_blank"><img src="petshop/contactform.png" alt="img"></a>
+        <a href="http://youtu.be/NFfBLazVqmY" target="_blank"><img src="petshop/googlemaps.png" alt="img"></a>
+        <h4>HTML Editon</h4>
+        <p><img src="petshop/slider-edition.jpg"></p>  
+                        </div>
+                    </article>
+                    <!-- /Edition -->
+
+                    <!-- Resources -->
+                    <article class="hentry" id="resources">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Resources</h1>
+                            <p>Some resources we used in this Template:</p>  
+                            <h4>Code</h4>
+                            <ul>
+                                <li>
+                                    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+                                </li>
+                                <li>
+                                    <a href="http://jquery.com/" target="_blank">Jquery </a> 
+                                </li>
+                                <li>
+                                    <a href="http://tympanus.net/codrops/" target="_blank"> Codrops - For menu animation</a> 
+                                </li>
+                                <li>
+                                    <a href="http://daneden.me/animate/" target="_blank"> CSS Animations - All the Documentation is there</a> 
+                                </li>                                
+                            </ul>
+                            <h4>Fonts</h4>
+                            <ul>
+                                <li>
+                                    <a href="http://www.google.com/fonts/specimen/Oswald" target="_blank">Oswald</a>
+                                </li>
+                            </ul>
+                            <h4>Images</h4>
+                            <ul>
+                                <li><a href="http://photodune.net/" target="_blank"> Photodune</a></li>
+                            </ul>
+                            <h4>Icons</h4>
+                            <ul>
+                                <li><a href="http://www.entypo.com/" target="_blank"> Entypo - Icon fonts</a> </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- /Resources -->
+
+                    <!-- Support -->
+                    <article class="hentry" id="support-forum">
+                        <div class="entry-content">
+                            <h1 class="entry-title">Support Forum</h1>
+                            <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, we'd be glad to help you if you have any questions relating to this theme. </p>
+                            <p><a href="https://mustachethemes.ticksy.com" target="_blank" class="btn btn-primary"><i class="glyphicon glyphicon-user"></i> Forum Support </a> </p>
+                        </div>
+                    </article>
+                    <!-- /Support -->
+
+                </main>
+            </div>
+            <!-- Main end -->
+
+        </div>
+    </div><!-- site container end -->
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/purl.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

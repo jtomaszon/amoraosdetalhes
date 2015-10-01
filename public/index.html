@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Amor aos Detalhes</title>
+  <script src="js/angular.min.js"></script>
+  <script src="app/amor.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontello.css" >
+  <link rel="stylesheet" href="plugins/grid/css/component.css" />
+  <link rel="stylesheet" href="plugins/revolution/css/settings.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/media-queries.css" />
+</head>
+
+
+<body ng-app="Amor">
+
+<!-- Header -->
+<header>
+<nav class="navbar" role="navigation">
+<div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="Logo" /></a>
+  </div>
+  
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trabalhos<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ><a href="banguela.html">Banguela</a></li>
+          <li ><a href="anjinha.html">Anjinha</a></li>
+        </ul>
+      </li>
+      <li class="disabled"><a href="#">Moldes</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="disabled"><a href="#">About</a></li>
+    </ul>
+
+<!--     <form class="navbar-form navbar-right search" role="search">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn" type="button"><i class="icon-search"></i></button>
+          </span>
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+    </form>
+ -->
+  </div><!--/.nav-collapse -->
+</div>
+</nav>
+</header>
+<!-- end Header -->
+
+<div id="content">
+  <section id="home" class="updatable">
+    
+
+    <!-- begin Featured Pooch -->
+    <article class="featured">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <img src="img/featured.png" alt="featured" class="img-rounded thumb">
+            <h3>"Pura Magia! "<i class="icon-heart"></i></h3>
+            <p>Felicidade me define! Criei esse espaço para compartilhar novos trabalhos e experiências, tudo feito com muito amor e carinho. O mundo do artesanato é mágico, por isso quero convidar vocês para conhecer e desvendar toda essa magia comigo, preparados?</p>
+            <div class="foot"><i class="icon-heart"></i> Outubro, 2015 <i class="icon-dot"></i> Giulia Santos Souza Zon <i class="icon-heart"></i></div>
+          </div>
+          <div class="col-md-3 vitals">
+            <h4>Quem faz<i class="icon-heart"></i></h4>
+            <p>
+              <strong>Nome:</strong> Giulia<br />
+              <strong>Idade:</strong> 24 anos<br />
+              Formada em Administração de RH. Casada com meu argentino, apaixonada por animais, tudo que é lindo, tudo que é simples e colorido! <br />
+            </p>
+          </div>
+         </div>
+
+      </div>     
+    </article>
+    <!-- end Featured Pooch -->
+
+    <!-- begin Our Reputation -->
+    <article class="reputation">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="carousel-reputation" class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11249091_861934400562945_7059663337696876157_n.jpg?oh=41b416d66462ca924ec3db3a02b65820&oe=569DAD2A&__gda__=1453822156_21d717fda3a6714ff9967f24035435ef" class="img-circle">
+                  <p>"Seus trabalho são lindos demais, a página está maravilhosa, parabéns!"</p>
+                  <span>Fernanda Lacerda, Boutique do Feltro</span>
+                </div>
+                <div class="item">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10501778_931698896894444_2707128075533189097_n.jpg?oh=f4f3e53051b317bae94d0138ddb747a2&oe=56A36BC4&__gda__=1452884301_fe2d6cca8de57de7763f7c6e31cd6a97" class="img-circle">
+                  <p>"Lindos, parabéns pelo gesto de doar os moldes. Ansiosa esperando!"</p>
+                  <span>Karen Teixeira</span>
+                </div>
+                <div class="item">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xta1/v/t1.0-1/p160x160/11351161_842072012547317_5635008445176824334_n.jpg?oh=e2193d480c3d148ab6e9027b6d8b8523&oe=56945D3D&__gda__=1451702291_e6e5d91320b1ee4eb305448cee96d475" class="img-circle">
+                  <p>"Estou encantada com suas criações! Parabéns!"</p>
+                  <span>Cris Baptista</span>
+                </div>
+                <div class="item">
+                  <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11046502_855401924495489_6909236374432912779_n.jpg?oh=00fd9c90d62390fc7773c6d0652a66db&oe=56A58FF4&__gda__=1453617938_b51bd91abae88656538e31437a7909fc" class="img-circle">
+                  <p>"Moldes maravilhosos e generosidade sem palavra. Parabéns"</p>
+                  <span>Ana Lucia Cunha</span>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-reputation" data-slide="prev">
+                <i class="icon-left-open"></i>
+              </a>
+              <a class="right carousel-control" href="#carousel-reputation" data-slide="next">
+                <i class="icon-right-open"></i>
+              </a>
+            </div>
+          </div>
+         </div>
+
+      </div>     
+    </article>
+    <!-- end Our Reputation -->
+
+    <!-- Our Puppies -->
+    <article class="puppies">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12"><h2>Meus Trabalhos</h2></div>
+      </div>
+
+      <div class="row" ng-controller="ItemsController">
+        <div class="col-xs-12">
+          <div class="grid">
+            <ul>
+              <li ng-repeat="item in items">
+                <a ng-href={{item.url}}>
+                  <img data-ng-src="img/items/thumbs/item{{item.index + 1}}.jpg" />
+                  <span ng-class="name">{{item.name}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+       </div>
+    </div>     
+    </article>
+    <!-- end Our Puppies -->
+
+  </section>
+</div>
+
+
+
+<!-- Footer -->
+<footer>
+
+  <!-- begin Contact -->
+  <article class="contact">
+  <div id="map"></div>
+  <div id="contact_bg">
+    <div class="container">
+       
+      <div class="row">
+      <div class="col-sm-12">
+        <div class="title">
+          <div class="centered"><div><h2>Contato!</h2></div></div>
+          <p>Entre em contato, mande para nós suas sugestões, críticas e dúvidas!!</p>
+        </div>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <address>
+          <i class="icon-home"></i> Guaratingueta, São Paulo<br>
+          <i class="icon-phone"></i> Phone:  +55 12 2103 0886<br />
+          <i class="icon-mail"></i> Email:  <a href="mailto:amoraosdetalhes@outlook.com.br">amoraosdetalhes@outlook.com.br</a><br />
+          <i class="icon-facebook"></i> Facebook:  <a href="#">facebook.com/amoraosdetalhes</a><br />
+          </address>
+        </div> 
+
+        <div class="col-sm-6">
+<!--           <form class="form-inline" role="form" id="contact-form" action="contact-form.php" method="post" accept-charset="utf-8">
+            <div class="form-group pull-left">
+              <label class="sr-only" for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+            </div>
+
+            <div class="form-group pull-right">
+              <label class="sr-only" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+            </div>
+
+            <textarea class="form-control pull-left" rows="8" name="message" >Message</textarea>
+
+            <input type="submit" class="btn btn-default pull-right" value="Contact us">
+          </form>
+ -->        </div>   
+       </div>
+
+     </div>
+  </div>
+  </article>
+  <!-- end Contact -->
+
+  <div class="bottom-foot">
+    <p>© 2015 Amor aos Detalhes<br /><a href="http://kbit.io">kbit.io</a></p>
+  </div>
+</footer>   
+<!-- end Footer --> 
+
+<a href="#" class="scrollup"><i class="icon-up-open"></i></a>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+
+    <!-- Slider Revolution -->
+    <script src="plugins/revolution/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- grid -->
+    <script src="plugins/grid/js/modernizr.custom.js"></script>
+    <script src="plugins/grid/js/classie.js"></script>
+    <script src="plugins/grid/js/thumbnailGridEffects.js"></script>
+
+    <!-- BlockUI -->
+    <script src="js/jquery.blockUI.js"></script>
+    
+    <!-- scrollTo -->
+    <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+
+    <!-- Gmaps -->
+    <script src="http://maps.google.com/maps/api/js?sensor=true" ></script>
+    <script src="js/gmaps.js" ></script>
+
+    <!-- Custom -->
+    <script src="js/script.js"  ></script>
+
+  <!-- ======================= End JQuery libs ======================= -->
+</body>
+</html>
