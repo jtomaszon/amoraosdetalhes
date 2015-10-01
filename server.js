@@ -2,7 +2,7 @@
 var express  = require('express');
 var app      = express();                               // create our app w/ express
 var mongoose = require('mongoose');                     // mongoose for mongodb
-var port     = process.env.PORT || 8080;                // set the port
+var port     = process.env.PORT || 8082;                // set the port
 var db       = require('./config/database');            // load the database config
 
 // Express dependencies
@@ -11,7 +11,7 @@ var bodyParser = require('body-parser');         // pull information from HTML P
 var methodOverride = require('method-override'); // simulate DELETE and PUT
 
 // configuration ===============================================================
-mongoose.connect(db.url);
+//ngoose.connect(db.url);
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
 app.use(morgan('dev'));                                         // log every request to the console
