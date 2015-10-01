@@ -4,7 +4,7 @@
 		"isActive" : true, 
 		"price" : "12", 
 		"name" : "Banguela", 
-		"desc" : "Dragão Banguela", 
+		"desc" : "Trabalho 100% artesanal, personagem do filme 'Como Treinar Seu Dragão'. Peça desenvolvida por Amor aos Detalhes.", 
 		"url" : "banguela.html", 
 		"size" : "14 cm" 
 	}, 
@@ -13,8 +13,26 @@
 		"isActive" : true, 
 		"price" : "10", 
 		"name" : "Anjinha", 
-		"desc" : "Anjinha", 
+		"desc" : "Trabalho 100% artesanal. Anjinha desenvolvida por Amor aos Detalhes. Ótima sugestão para lembrancinhas de batizados, crisma e outros.", 
 		"url" : "anjinha.html", 
 		"size" : "12 cm" 
-	} 
+	}, 
+	{ 
+		"index" : 2, 
+		"isActive" : true, 
+		"price" : "10", 
+		"name" : "Passarinha", 
+		"desc" : "Quando eu olho para essa passarinha sinto uma vontade imensa de sorrir! Essa peça foi desenvolvida por Amor aos Detalhes e você pode usar em decorações de festas, batizados e quartos de bebe. Solte a sua criatividade e crie passarinhos de diversas cores!!", 
+		"url" : "passarinha.html", 
+		"size" : "8 cm" 
+	}, 
+	{ 
+		"index" : 3, 
+		"isActive" : true, 
+		"price" : "10", 
+		"name" : "Burro", 
+		"desc" : "Burro", 
+		"url" : "burro.html", 
+		"size" : "8 cm" 
+	}
 ]
