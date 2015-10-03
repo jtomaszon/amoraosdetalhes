@@ -8,6 +8,10 @@ module.exports = function(app) {
     res.render('home');
   });
 
+  app.get('/moldes', function(req, res) {
+    res.render('patterns');
+  });
+
   app.get('/items/:item', function(req, res) {
     item = req.params.item;
       res.render('items', data[item]); 

@@ -17,7 +17,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT
 var data = JSON.parse(fs.readFileSync(__dirname + '/public/data.json', 'utf8'));
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
-app.use(morgan('prod'));                                        // log every request to the console
+app.use(morgan('dev'));                                        // log every request to the console
 app.use(compress()); 
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
 app.use(bodyParser.json());                                     // parse application/json

@@ -145,7 +145,6 @@ strong.highlight {
 }
 
 
-
 /********************************* Carousel ********************************/
 .carousel-control {
   background: #281c4c;
@@ -183,7 +182,6 @@ strong.highlight {
   filter: none;
 }
 
-
 /**************************** Carousel with Thumb **************************/
 .carousel.carousel-thumb ol {
   font-size: 1em;
@@ -220,59 +218,6 @@ strong.highlight {
   width: auto;
 }
 
-
-
-
-
-/********************************** Coupons ********************************/
-.coupon {
-  margin: 0 0 60px 0;
-}
-.coupon img {
-  max-width: 380px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-.coupon .expires {
-  color: #abb2c7;
-  display: block;
-  font-size: 0.8em;
-  margin-top: 0;
-  text-transform: uppercase;
-}
-.coupon h3 {
-  margin: 10px 0;
-  color: #9499af;
-}
-.coupon .oldnumber,
-.coupon .newnumber {
-  color: #52c1ba;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.coupon .oldnumber {
-  color: #281c4c;
-  text-decoration: line-through;
-  margin-right: 10px;
-}
-.coupon .free {
-  color: #52c1ba;
-  display: inline-block;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.coupon span:first-child {
-  margin-left: 0;
-} 
-
-.coupon .btn {
-  margin: 20px 0 0 0;
-}
-
-
-
-
 /********************************* Dropdowns *******************************/
 .dropdown {
   z-index: 2000;
@@ -294,7 +239,6 @@ strong.highlight {
   margin: 0;
   padding: 0 15px;
 }
-
 
 
 /********************************* Filters *******************************/
@@ -321,7 +265,6 @@ strong.highlight {
   -webkit-border-radius: 18px;
   border-radius: 18px;
 }
-
 
 
 /********************************* Social Media Icons *******************************/
@@ -374,9 +317,6 @@ strong.highlight {
 .social.behance {
   background: #2186fc;
 }
-
-
-
 
 
 /********************************* Titles *******************************/
@@ -472,14 +412,10 @@ strong.highlight {
 }
 
 
-
 /**************************** Revolution Slider ****************************/
 .tt-grid-wrapper nav a {
   background: #281c4c;
 }
-
-
-
 
 /********************************** Article ********************************/
   
@@ -551,8 +487,6 @@ form.search .input-group-addon {
   -webkit-border-radius: 0;
   border-radius: 0;
 }
-
-
 
 /********************************** Grid ***********************************/
 .grid {
@@ -747,7 +681,6 @@ form.search .input-group-addon {
 }
 
 
-
 /****************************** Pagination *********************************/
 .center-pag {
   position: absolute;
@@ -795,30 +728,24 @@ form.search .input-group-addon {
 }
 
 
-
-
-
-
-/********************************* Services *******************************/
-.service {
+/********************************* Patterns *******************************/
+.pattern {
   margin: 100px 0 0 0;
 }
 
-.service.first {
+.pattern.first {
   margin-top: 50px;
 }
 
-.service img {
+.pattern img {
    margin-bottom: 20px;
   -webkit-border-radius: 5px;
   border-radius: 5px;   
 }
 
-.service a:hover {
+.pattern a:hover {
   color: #722881;
 }
-
-
 
 
 /***************************************************************************/
@@ -941,11 +868,6 @@ header .navbar .navbar-form .form-group .input-group-btn .btn {
 }
 
 
-
-
-
-
-
 /************************************ Home *********************************/
 #home .reputation {
   background: #f5f5f5;
@@ -974,7 +896,7 @@ header .navbar .navbar-form .form-group .input-group-btn .btn {
   font-size: 0.8em;
 }
 
-#home .services {
+#home .patterns {
   background: #f5f5f5;
 }
 
@@ -1233,201 +1155,6 @@ aside .recent-news a:hover {
 }
 
 
-/************************ Clients ************************/
-.clients{
-    
-}
-
-.images_holder {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.images_holder img.active_image {
-    opacity: 1;  
-}
-
-.images_holder img.hover_image {
-    opacity: 0;
-}
-
-.images_holder:hover img.hover_image{
-    opacity: 1;
-}
-
-.images_holder img.hover_image {
-    left: 0;
-    position: absolute;
-    top: 0;
-    -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
-
-
-
-/********************************* Pricing table *********************************/
-.pricing-tables-main{
-  margin-bottom: 8%;
-  display: block;
-  float: left;
-}
-.pricing-tables-main:last-child {
-  
-}
-.pricing-tables {
-    float: left;
-    position: relative;
-    width: 24%;
-}
-.pricing-tables .title {
-    background-color: #9499af;
-    border-bottom: 1px solid #72778C;
-    color: #FFFFFF;
-    float: left;
-    font-size: 18px;
-    font-weight: normal;
-    padding: 12px 0 10px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-}
-.pricing-tables .price {
-    background-color: #80869B;
-    color: #FFFFFF;
-    float: left;
-    font-size: 40px;
-    font-weight: normal;
-    padding: 30px 0 20px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-}
-.pricing-tables .price i {
-    color: #CCCCCC;
-    display: block;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 18px;
-}
-.pricing-tables .cont-list {
-    background-color: #F9F9F9;
-    border-bottom: 3px solid #FFFFFF;
-    border-top: 3px solid #FFFFFF;
-    color: #727272;
-    float: left;
-    text-align: center;
-    width: 100%;
-}
-.pricing-tables .cont-list ul {
-    margin: 0;
-    padding: 0;
-}
-.pricing-tables .cont-list li {
-    border-bottom: 1px solid #FFFFFF;
-    line-height:1;
-    list-style-type: none;
-    margin: 0;
-    padding: 20px 0;
-}
-.pricing-tables .cont-list li.last {
-    border: medium none;
-}
-.ordernow {
-    background-color: #E3E3E3;
-    color: #FFFFFF;
-    float: left;
-    padding: 7%;
-    text-align: center;
-    width: 100%;
-}
-
-
-/*************** helight ************/
-.pricing-tables-helight {
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
-    float: left;
-    position: relative;
-    width: 27%;
-    z-index: 999;
-}
-.pricing-tables-helight .title {
-    background-color: #722881;
-    border-bottom: 1px solid #612170;
-    color: #FFFFFF;
-    float: left;
-    font-size: 18px;
-    font-weight: normal;
-    margin-top: -10px;
-    padding: 19px 0 21px 0;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-}
-.pricing-tables-helight .price {
-    background-color: #571966;
-    color: #FFFFFF;
-    float: left;
-    font-size: 45px;
-    font-weight: normal;
-    padding: 34px 0 20px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-}
-.pricing-tables-helight .price i {
-    color: #EEEEEE;
-    display: block;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 20px;
-}
-.pricing-tables-helight .cont-list {
-    background-color: #F9F9F9;
-    border-bottom: 3px solid #FFFFFF;
-    border-top: 3px solid #FFFFFF;
-    color: #727272;
-    float: left;
-    text-align: center;
-    width: 100%;
-}
-.pricing-tables-helight .cont-list ul {
-    margin: 0;
-    padding: 0;
-}
-.pricing-tables-helight .cont-list li {
-    border-bottom: 1px solid #FFFFFF;
-    line-height: 1;
-    list-style-type: none;
-    margin: 0;
-    padding: 20px 0;
-}
-
-.pricing-tables-helight .ordernow {
-    background-color: #EEEEEE;
-    color: #FFFFFF;
-    float: left;
-    padding: 12% 6%;
-}
-
-.pricing-tables.three {
-    width: 32%;
-}
-.pricing-tables-helight.middle {
-    width: 36%;
-}
-
-
-
-
-
-
-
 /************************ Footer ************************/
 footer {
   margin-top: 70px;
@@ -1483,7 +1210,6 @@ footer .bottom-foot a{
 footer .bottom-foot a:hover{
   color: #C27470;
 }
-
 
 
 /************************  Go to top arrow ************************/
