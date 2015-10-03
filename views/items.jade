@@ -43,9 +43,7 @@ block content
           .col-md-4
             .row
               .col-xs-12.col-sm-6.col-md-12
-                p
-                  | #{desc}
-              |         
+                p #{desc}
               .col-xs-12.col-sm-6.col-md-12
                 #carousel-thumb-puppie.carousel.slide(data-ride='carousel', data-interval='false')
                   // Wrapper for slides
@@ -60,6 +58,8 @@ block content
                         |               
                         li.thumb(data-target='#carousel-puppie', data-slide-to='2')
                           img(src='/img/items/'+item+'/thumbs/3.jpg')
+
+              .fb-like(data-href='http://amoraosdetalhes.com.br/items/'+item, data-action='like', data-show-faces='false')  
 
     |   
     article
