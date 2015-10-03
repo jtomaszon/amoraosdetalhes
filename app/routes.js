@@ -17,8 +17,8 @@ module.exports = function(app) {
     var transporter = mail.createTransport({
       service: 'hotmail',
       auth: {
-        user: 'amoraosdetalhes@outlook.com.br',
-        pass: '216965giu'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
       }
     });
 
