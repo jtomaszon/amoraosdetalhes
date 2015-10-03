@@ -35,12 +35,13 @@ $(document).ready(function() {
 			dataType : "html",
 			data : $(this).serialize(),
 			beforeSend : function() {
-				elem.prepend("<div class='loading alert'>" + "<a class='close' data-dismiss='alert'>Ã—</a>" + "Loading" + "</div>");
+				elem.append("<div class='loading alert'>Enviando...</div>");
 			},
 			success : function(response) {
-				elem.prepend(response);
+				elem.append('Enviado!');
 				elem.find(".loading").hide();
 				elem.find("input[type='text'],input[type='email'],textarea").val("");
+				elem.find("input[type='submit']").prop('disabled', true);
 			}
 		})
 		return false;
