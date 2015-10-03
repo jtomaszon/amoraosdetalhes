@@ -24,7 +24,7 @@ module.exports = function(app) {
 
     transporter.sendMail({
       from: 'amoraosdetalhes@outlook.com.br',
-      to: 'jtomaszon@gmail.com',
+      to: 'amoraosdetalhes@outlook.com.br',
       subject: 'Contato amoraosdetalhes.com',
       text: req.body.name + " <"+req.body.email+"> " + 'diz:\n' + req.body.message
     }, function(err, info){
