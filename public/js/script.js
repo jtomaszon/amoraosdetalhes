@@ -1,26 +1,5 @@
 $(document).ready(function() {
-	
 
-/*******************************  GMaps  ***********************************/
-	if ($('#map').length) {
-		
-		var map;
-		map = new GMaps({
-			div: '#map',
-			lat: -22.775729,
-			lng: -45.1984134
-		});
-
-		map.addMarker({
-			lat: -22.775729,
-			lng: -45.1984134,
-			title: 'Contanct',
-			infoWindow: {
-				content: 'Vilage Santana<br /> 12513-400, BR<br /> <br /> Email: amoraosdetalhes@outlook.com.br <br /> Web: amoraosdetalhes.com.br'
-			}
-		});
-
-	}
 
 /*******************************  carousel  ***********************************/
 

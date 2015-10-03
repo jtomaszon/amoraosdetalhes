@@ -1433,6 +1433,7 @@ footer {
   margin-top: 70px;
 }
 footer .contact {
+  background-image: url('/img/gmap.jpg');
   min-height: 575px;
   padding: 0;
   color: #fff;
