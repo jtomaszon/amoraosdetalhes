@@ -1,38 +1,92 @@
-[
-	{ 
-		"index" : 0, 
-		"isActive" : true, 
-		"price" : "12", 
-		"name" : "Banguela", 
-		"desc" : "Trabalho 100% artesanal, personagem do filme 'Como Treinar Seu Dragão'. Peça desenvolvida por Amor aos Detalhes.", 
-		"url" : "banguela.html", 
-		"size" : "14 cm" 
-	}, 
-	{ 
-		"index" : 1, 
-		"isActive" : true, 
-		"price" : "10", 
-		"name" : "Anjinha", 
-		"desc" : "Trabalho 100% artesanal. Anjinha desenvolvida por Amor aos Detalhes. Ótima sugestão para lembrancinhas de batizados, crisma e outros.", 
-		"url" : "anjinha.html", 
-		"size" : "12 cm" 
-	}, 
-	{ 
-		"index" : 2, 
-		"isActive" : true, 
-		"price" : "10", 
-		"name" : "Passarinha", 
-		"desc" : "Quando eu olho para essa passarinha sinto uma vontade imensa de sorrir! Essa peça foi desenvolvida por Amor aos Detalhes e você pode usar em decorações de festas, batizados e quartos de bebe. Solte a sua criatividade e crie passarinhos de diversas cores!!", 
-		"url" : "passarinha.html", 
-		"size" : "8 cm" 
-	}, 
-	{ 
-		"index" : 3, 
-		"isActive" : true, 
-		"price" : "10", 
-		"name" : "Burro", 
-		"desc" : "Burro", 
-		"url" : "burro.html", 
-		"size" : "8 cm" 
-	}
-]
+{
+  "banguela" : { 
+    "isActive" : true, 
+    "price" : "12", 
+    "name" : "Banguela", 
+    "title" : "Dragão Banguela",
+    "desc" : "Trabalho 100% artesanal, personagem do filme 'Como Treinar Seu Dragão'. Peça desenvolvida por Amor aos Detalhes.", 
+    "url" : "banguela", 
+    "size" : "14 cm" 
+  }, 
+  "anjinha" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Anjinha",
+    "title" : "Docinho", 
+    "desc" : "Trabalho 100% artesanal. Anjinha desenvolvida por Amor aos Detalhes. Ótima sugestão para lembrancinhas de batizados, crisma e outros.", 
+    "url" : "anjinha", 
+    "size" : "12 cm" 
+  }, 
+  "passarinha" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Passarinha",
+    "title" : "A Fofa",
+    "desc" : "Quando eu olho para essa passarinha sinto uma vontade imensa de sorrir! Essa peça foi desenvolvida por Amor aos Detalhes e você pode usar em decorações de festas, batizados e quartos de bebe. Solte a sua criatividade e crie passarinhos de diversas cores!!", 
+    "url" : "passarinha", 
+    "size" : "8 cm" 
+  }, 
+  "burro" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Burro", 
+    "title" : "O Elegante",
+    "desc" : "Esse burrinho distribui charme e elegância! A peça é 100% feita a mão, foi desenvolvida por Amor aos Detalhes e tem uma simplicidade que a faz ser muito especial! Você pode presentear alguém ou usar para decorar!", 
+    "url" : "burro", 
+    "size" : "8 cm" 
+  }, 
+  "leao" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Leão",
+    "title" : "O rei", 
+    "desc" : "Alguém já viu um rei da selva tão fofinho?! Essa versão foi desenvolvida por Amor aos Detalhes para que você possa usar em Guirlandas, decorações de festas e ambientes. Uma peça feita a mão e que deixa feliz o dia de qualquer pessoa!",
+    "url" : "leao", 
+    "size" : "8 cm" 
+  }, 
+  "girafa" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Girafa", 
+    "title" : "A Gigi",
+    "desc" : "Gente não te animal mais elegante que a Girafa. Com seu pescoço cumprido, ela é pura elegância, uma verdadeira modelo de passarela! Essa peça foi criada por Amor aos Detalhes, totalmente feita a mão. Você pode usar em decorações e Guirlandas.",
+    "url" : "girafa", 
+    "size" : "8 cm" 
+  }, 
+  "panda" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Panda", 
+    "title" : "O Panda",
+    "desc" : "Esse panda é um fofura só! Eu simplemeste adoro essa peça! Uma ótima dica de presente! Por que afinal, quem não gosta de pandas? rs",
+    "url" : "panda", 
+    "size" : "8 cm" 
+  }, 
+  "guaxinim" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Guaxinim",
+    "title" : "Puro Glamour", 
+    "desc" : "Essa pequena Guaxinim me conquistou! Uma peça desenvolvida por Amor aos Detalhes e que pode ser usada em Guirlandas e Decorações. Você ainda pode criar peças com outras cores, solte a criatividade!",
+    "url" : "guaxinim", 
+    "size" : "8 cm" 
+  }, 
+  "dragao" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Dragão", 
+    "title" : "A Delicada",
+    "desc" : "Quem pensa que uma Dragão não pode ser feminina, está muito enganado. Não tem peça mais charmosa e delicada que essa pequena  Dragão. Ela é já iniciou um romance com o Dragão Banguela e não é que os dois formam um lindo casal! Peça desenvolvida por Amor aos Detalhes e feita 100% a mão.",
+    "url" : "dragao", 
+    "size" : "8 cm" 
+  }, 
+  "vaquinha" : { 
+    "isActive" : true, 
+    "price" : "10", 
+    "name" : "Vaquinha",
+    "title" : "Mimosa",
+    "desc" : "Ah essa vaquinha… É tanta leveza, que dá vontade de ter várias vaquinhas e ficar olhando para elas! Essa peça foi desenvolvida por amor aos detalhes, 100% feita a mão. Uma peça ótima e super versátil.",
+    "url" : "vaquinha", 
+    "size" : "8 cm" 
+  }
+}

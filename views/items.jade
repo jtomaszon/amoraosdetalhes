@@ -1,0 +1,71 @@
+extend layout
+block content
+
+  section#spuppie
+    article
+      .container
+        .row
+          .col-xs-12
+            h2.header Meus Trabalhos
+        .row
+          .title
+            .centered
+              div
+                h2 #{title}
+            p Agosto 29, 2015
+        .row
+          .col-md-8
+            #carousel-puppie.carousel.slide(data-ride='carousel', data-interval='false')
+              // Wrapper for slides
+              .carousel-inner
+                .item.active
+                  img(src='/img/items/'+item+'/1.jpg')    
+                .item
+                  img(src='/img/items/'+item+'/2.jpg')
+                .item
+                  img(src='/img/items/'+item+'/3.jpg')
+          |       
+          .col-md-4
+            .row
+              .col-xs-12.col-sm-6.col-md-12
+                p
+                  | #{desc}
+              |         
+              .col-xs-12.col-sm-6.col-md-12
+                #carousel-thumb-puppie.carousel.slide(data-ride='carousel', data-interval='false')
+                  // Wrapper for slides
+                  .carousel-inner
+                    .item.active
+                      ol
+                        li.active.thumb(data-target='#carousel-puppie', data-slide-to='0')
+                          img(src='/img/items/'+item+'/thumbs/1.jpg', alt='//')
+                        |               
+                        li.thumb(data-target='#carousel-puppie', data-slide-to='1')
+                          img(src='/img/items/'+item+'/thumbs/2.jpg', alt='//')
+                        |               
+                        li.thumb(data-target='#carousel-puppie', data-slide-to='2')
+                          img(src='/img/items/'+item+'/thumbs/3.jpg', alt='//')
+                  // Controls
+                  .controls
+                    a.left.carousel-control(href='#carousel-thumb-puppie', data-slide='prev')
+                      i.icon-left-open
+                    |           
+                    span.more-img view more images
+                    |           
+                    a.right.carousel-control(href='#carousel-thumb-puppie', data-slide='next')
+                      i.icon-right-open
+    |   
+    article
+      .container
+        .row
+          .col-xs-12
+            h2.header Veja tamb&eacute;m:
+        |       
+        .row(ng-controller='ItemsController')
+          .col-xs-12
+            .grid
+              ul
+                li(ng-repeat='item in items')
+                  a(ng-href='/items/{{item.url}}')
+                    img(data-ng-src='/img/items/{{item.url}}/thumbs/1.jpg')
+                    span(ng-class='name') {{item.name}}

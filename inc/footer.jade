@@ -1,0 +1,60 @@
+// Footer
+footer
+    // begin Contact
+    article.contact
+      #map
+      |     
+      #contact_bg
+        .container
+          .row
+            .col-sm-12
+              .title
+                .centered
+                  div
+                    h2 Contato!
+                |             
+                p Entre em contato, mande para n&oacute;s suas sugest&otilde;es, cr&iacute;ticas e d&uacute;vidas!!
+          |         
+          .row
+            .col-sm-6
+              address
+                i.icon-home
+                |  Guaratingueta, S&atilde;o Paulo
+                br
+                |             
+                i.icon-phone
+                |  Phone:  +55 12 2103 0886
+                br
+                |             
+                i.icon-mail
+                |  Email:  
+                a(href='mailto:amoraosdetalhes@outlook.com.br') amoraosdetalhes@outlook.com.br
+                br
+                |             
+                i.icon-facebook
+                |  Facebook:  
+                a(href='#') facebook.com/amoraosdetalhes
+                br
+            |  
+            |           
+            .col-sm-6
+              //
+                <form class="form-inline" role="form" id="contact-form" action="contact-form.php" method="post" accept-charset="utf-8">
+                <div class="form-group pull-left">
+                <label class="sr-only" for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+                </div>
+                <div class="form-group pull-right">
+                <label class="sr-only" for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                </div>
+                <textarea class="form-control pull-left" rows="8" name="message" >Message</textarea>
+                <input type="submit" class="btn btn-default pull-right" value="Contact us">
+                </form>
+    // end Contact
+    .bottom-foot
+      p
+        | &copy; 2015 Amor aos Detalhes
+        br
+        a(href='http://kbit.io') kbit.io
+  // end Footer

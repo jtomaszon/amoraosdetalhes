@@ -1,0 +1,99 @@
+extend layout
+block content
+  section#home.updatable
+    // begin Featured Pooch
+    article.featured
+      .container
+        .row
+          .col-md-9
+            img.img-rounded.thumb(src='img/featured.png', alt='featured')
+            |               
+            h3
+              | &quot;Pura Magia! &quot;
+              i.icon-heart
+            |               
+            p
+              | Felicidade me define! Criei esse espa&ccedil;o para compartilhar novos trabalhos e experi&ecirc;ncias, tudo feito com muito amor e carinho. O mundo do artesanato &eacute; m&aacute;gico, por isso quero convidar voc&ecirc;s para conhecer e desvendar toda essa magia comigo, preparados?
+            |               
+            .foot
+              i.icon-heart
+              |  Outubro, 2015 
+              i.icon-dot
+              |  Giulia Santos Souza Zon 
+              i.icon-heart
+          |             
+          .col-md-3.vitals
+            h4
+              | Quem faz
+              i.icon-heart
+            |               
+            p
+              strong Nome:
+              |  Giulia
+              br
+              |                 
+              strong Idade:
+              |  24 anos
+              br
+              |  Formada em Administra&ccedil;&atilde;o de RH. Casada com meu argentino, apaixonada por animais, tudo que &eacute; lindo, tudo que &eacute; simples e colorido! 
+              br
+    // end Featured Pooch
+    // begin Our Reputation
+    article.reputation
+      .container
+        .row
+          .col-md-12
+            #carousel-reputation.carousel.slide(data-ride='carousel')
+              // Wrapper for slides
+              .carousel-inner
+                .item.active
+                  img.img-circle(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11249091_861934400562945_7059663337696876157_n.jpg?oh=41b416d66462ca924ec3db3a02b65820&oe=569DAD2A&__gda__=1453822156_21d717fda3a6714ff9967f24035435ef')
+                  |                     
+                  p &quot;Seus trabalho s&atilde;o lindos demais, a p&aacute;gina est&aacute; maravilhosa, parab&eacute;ns!&quot;
+                  |                     
+                  span Fernanda Lacerda, Boutique do Feltro
+                |                   
+                .item
+                  img.img-circle(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfa1/v/t1.0-1/p160x160/10501778_931698896894444_2707128075533189097_n.jpg?oh=f4f3e53051b317bae94d0138ddb747a2&oe=56A36BC4&__gda__=1452884301_fe2d6cca8de57de7763f7c6e31cd6a97')
+                  |                     
+                  p &quot;Lindos, parab&eacute;ns pelo gesto de doar os moldes. Ansiosa esperando!&quot;
+                  |                     
+                  span Karen Teixeira
+                |                   
+                .item
+                  img.img-circle(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xta1/v/t1.0-1/p160x160/11351161_842072012547317_5635008445176824334_n.jpg?oh=e2193d480c3d148ab6e9027b6d8b8523&oe=56945D3D&__gda__=1451702291_e6e5d91320b1ee4eb305448cee96d475')
+                  |                     
+                  p &quot;Estou encantada com suas cria&ccedil;&otilde;es! Parab&eacute;ns!&quot;
+                  |                     
+                  span Cris Baptista
+                |                   
+                .item
+                  img.img-circle(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p160x160/11046502_855401924495489_6909236374432912779_n.jpg?oh=00fd9c90d62390fc7773c6d0652a66db&oe=56A58FF4&__gda__=1453617938_b51bd91abae88656538e31437a7909fc')
+                  |                     
+                  p &quot;Moldes maravilhosos e generosidade sem palavra. Parab&eacute;ns&quot;
+                  |                     
+                  span Ana Lucia Cunha
+              // Controls
+              a.left.carousel-control(href='#carousel-reputation', data-slide='prev')
+                i.icon-left-open
+              |                 
+              a.right.carousel-control(href='#carousel-reputation', data-slide='next')
+                i.icon-right-open
+    // end Our Reputation
+    // Our Puppies
+    article.puppies
+      .container
+        .row
+          .col-xs-12
+            h2 Meus Trabalhos
+        |         
+        .row(ng-controller='ItemsController')
+          .col-xs-12
+            .grid
+              ul
+                li(ng-repeat='item in items')
+                  a(ng-href='/items/{{item.url}}')
+                    img(data-ng-src='/img/items/{{item.url}}/thumbs/1.jpg')
+                    |                     
+                    span(ng-class='name') {{item.name}}
+    // end Our Puppies

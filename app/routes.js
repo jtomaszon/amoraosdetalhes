@@ -1,47 +1,29 @@
-// load the item model
-var Item = require('./models/item');
+var fs       = require('fs');
+var data = JSON.parse(fs.readFileSync(__dirname + '/../public/data.json', 'utf8'));
+
+Array.prototype.contains = function(k, callback) {
+    var self = this;
+    return (function check(i) {
+        if (i >= self.length) {
+            return callback(false);
+        }
+
+        if (self[i] === k) {
+            return callback(true);
+        }
+
+        return process.nextTick(check.bind(null, i+1));
+    }(0));
+}
 
 module.exports = function(app) {
 
-  app.get('/api/items', function(req, res) {
-
-    Item.find(function(err, items) {
-      if (err) res.send(err);
-      res.json(items); 
-    });
+  app.get('/', function(req, res) {
+    res.render('home');
   });
 
-  // create item and send back all items after creation
-  app.post('/api/items', function(req, res) {
-
-    Item.create({
-      text : req.body.text,
-      done : false
-    }, function(err, item) {
-      if (err) res.send(err);
-      Item.find(function(err, items) {
-        if (err) res.send(err);
-        res.json(items);
-      });
-    });
-
+  app.get('/items/:item', function(req, res) {
+    item = req.params.item;
+      res.render('items', data[item]); 
   });
-
-  app.delete('/api/items/:item_id', function(req, res) {
-    Item.remove({
-      _id : req.params.item_id
-    }, function(err, item) {
-      if (err) res.send(err);
-      Item.find(function(err, items) {
-        if (err) res.send(err);
-        res.json(items);
-      });
-    });
-  });
-
-
-  app.get('*', function(req, res) {
-    res.sendFile('./public/index.html');
-  });
-
 };

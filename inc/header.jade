@@ -1,0 +1,44 @@
+// Header
+header
+  nav.navbar(role='navigation')
+    .container
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/')
+          img(src='/img/logo.png', alt='Logo')
+      // Collect the nav links, forms, and other content for toggling
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='/') Home   
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | Trabalhos
+              span.caret
+            ul.dropdown-menu
+              each item in data
+                li
+                  a(href='/items/' + item.url) #{item.name}    
+          li.disabled
+            a(href='#') Moldes
+        ul.nav.navbar-nav.navbar-right
+          li.disabled
+            a(href='#') About
+        //
+          <form class="navbar-form navbar-right search" role="search">
+          <div class="form-group">
+          <div class="input-group">
+          <span class="input-group-btn">
+          <button class="btn" type="button"><i class="icon-search"></i></button>
+          </span>
+          <input type="text" class="form-control" placeholder="Search">
+          </div>
+          </div>
+          </form>
+        //
+// end Header

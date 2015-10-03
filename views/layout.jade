@@ -1,0 +1,38 @@
+doctype
+html.
+head
+  meta(charset='utf-8')
+  title Amor aos Detalhes
+  script(src='/js/angular.min.js')
+  script(src='/app/amor.js')
+  meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  meta(name='author', content='kbit.io')
+  meta(name='keywords', content='feltro, fofuras, banguela, anjinha, decoração aniversários, decoração festa infantil, decorações infantis, decoração de festas, festas infantis')
+  meta(name='robots', content='index, follow')
+  link(rel='stylesheet', href='/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/css/fontello.css')
+  link(rel='stylesheet', href='/plugins/grid/css/component.css')
+  link(rel='stylesheet', href='/plugins/revolution/css/settings.css')  
+  link(rel='stylesheet', href='/css/styles.css') 
+  link(rel='stylesheet', href='/css/media-queries.css')
+  
+body(ng-app='Amor')
+  include ../inc/header.jade
+  #content
+    block content
+  include ../inc/footer.jade
+
+  a.scrollup(href='#')
+    i.icon-up-open
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+  script(src='/js/bootstrap.min.js')
+  script(src='/plugins/revolution/js/jquery.themepunch.plugins.min.js')
+  script(src='/plugins/revolution/js/jquery.themepunch.revolution.min.js')
+  script(src='/plugins/grid/js/modernizr.custom.js')
+  script(src='/plugins/grid/js/classie.js')
+  script(src='/plugins/grid/js/thumbnailGridEffects.js')
+  script(src='/js/jquery.blockUI.js')
+  script(src='/js/jquery.scrollTo-1.4.3.1-min.js')
+  script(src='//maps.google.com/maps/api/js?sensor=true')
+  script(src='/js/gmaps.js')
+  script(src='/js/script.js')
