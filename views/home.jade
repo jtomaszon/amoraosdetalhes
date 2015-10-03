@@ -1,4 +1,14 @@
 extend layout
+
+block facebook
+
+  //Facebook tags
+  meta(property='og:locale', content='pt_BR')
+  meta(property='og:description', content='Criei esse espaço para compartilhar novos trabalhos e experiências, tudo feito com muito amor e carinho. O mundo do artesanato é mágico, por isso quero convidar vocês para conhecer e desvendar toda essa magia comigo, preparados?')
+  meta(property='og:image', content='http://amoraosdetalhes.com.br/img/featured.png')
+  meta(property='og:image:type', content='image/jpeg')
+
+
 block content
   section#home.updatable
     // begin Featured Pooch
@@ -94,6 +104,5 @@ block content
                 li(ng-repeat='item in items')
                   a(ng-href='/items/{{item.url}}')
                     img(data-ng-src='/img/items/{{item.url}}/thumbs/1.jpg')
-                    |                     
                     span(ng-class='name') {{item.name}}
     // end Our Puppies

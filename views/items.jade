@@ -1,4 +1,13 @@
 extend layout
+
+block facebook
+
+  //Facebook tags
+  meta(property='og:locale', content='pt_BR')
+  meta(property='og:description', content='#{desc}')
+  meta(property='og:image', content='http://amoraosdetalhes.com.br/img/items/'+item+'/1.jpg')
+  meta(property='og:image:type', content='image/jpeg')
+
 block content
 
   section#spuppie
@@ -38,22 +47,14 @@ block content
                     .item.active
                       ol
                         li.active.thumb(data-target='#carousel-puppie', data-slide-to='0')
-                          img(src='/img/items/'+item+'/thumbs/1.jpg', alt='//')
+                          img(src='/img/items/'+item+'/thumbs/1.jpg')
                         |               
                         li.thumb(data-target='#carousel-puppie', data-slide-to='1')
-                          img(src='/img/items/'+item+'/thumbs/2.jpg', alt='//')
+                          img(src='/img/items/'+item+'/thumbs/2.jpg')
                         |               
                         li.thumb(data-target='#carousel-puppie', data-slide-to='2')
-                          img(src='/img/items/'+item+'/thumbs/3.jpg', alt='//')
-                  // Controls
-                  .controls
-                    a.left.carousel-control(href='#carousel-thumb-puppie', data-slide='prev')
-                      i.icon-left-open
-                    |           
-                    span.more-img view more images
-                    |           
-                    a.right.carousel-control(href='#carousel-thumb-puppie', data-slide='next')
-                      i.icon-right-open
+                          img(src='/img/items/'+item+'/thumbs/3.jpg')
+
     |   
     article
       .container
