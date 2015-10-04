@@ -2,7 +2,7 @@ var fs   = require('fs');
 var data = JSON.parse(fs.readFileSync(__dirname + '/../public/data.json', 'utf8'));
 var mail = require('nodemailer');
 
-module.exports = function(app) {
+module.exports = function(app, passport) {
 
   app.get('/', function(req, res) {
     res.render('home');
@@ -16,6 +16,23 @@ module.exports = function(app) {
     item = req.params.item;
       res.render('items', data[item]); 
   });
+
+  // Facebook
+  app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
+  // handle the callback after facebook has authenticated the user
+  app.get('/auth/facebook/callback',
+      passport.authenticate('facebook', {
+          successRedirect : '/profile',
+          failureRedirect : '/'
+      }));
+
+  // route for logging out
+  app.get('/logout', function(req, res) {
+      req.logout();
+      res.redirect('/');
+  });
+  // END Facebook
 
   app.post('/mail', function(req, res){
     var transporter = mail.createTransport({
@@ -39,3 +56,9 @@ module.exports = function(app) {
 
   })
 };
+
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated())
+      return next();
+  res.redirect('/');
+}

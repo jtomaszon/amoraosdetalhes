@@ -3,6 +3,8 @@ var express  = require('express');
 var compress = require('compression');
 var app      = express();                               // create our app w/ express
 var mongoose = require('mongoose');                     // mongoose for mongodb
+var passport = require('passport');
+
 var port     = process.env.PORT || 8082;                // set the port
 var fs       = require('fs');
 var db       = require('./config/database');            // load the database config
@@ -14,6 +16,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT
 
 // configuration ===============================================================
 //mongoose.connect(db.url);
+require('./config/passport')(passport);
 var data = JSON.parse(fs.readFileSync(__dirname + '/public/data.json', 'utf8'));
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
@@ -35,7 +38,7 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
 
 // routes ======================================================================
-require('./app/routes')(app);
+require('./app/routes')(app, passport);
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
