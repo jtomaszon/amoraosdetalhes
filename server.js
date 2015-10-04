@@ -15,8 +15,9 @@ var bodyParser = require('body-parser');         // pull information from HTML P
 var methodOverride = require('method-override'); // simulate DELETE and PUT
 
 // configuration ===============================================================
-//mongoose.connect(db.url);
+mongoose.connect(db.url);
 require('./config/passport')(passport);
+
 var data = JSON.parse(fs.readFileSync(__dirname + '/public/data.json', 'utf8'));
 
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
