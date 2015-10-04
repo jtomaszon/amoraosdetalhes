@@ -8,13 +8,23 @@ module.exports = function(app, passport) {
     res.render('home');
   });
 
+<<<<<<< HEAD
   app.get('/moldes', isLoggedIn, function(req, res) {
     res.render('patterns');
+=======
+  app.get('/blog', function(req, res) {
+    res.render('blog');
+  });
+
+  app.get('/blog/:item', isLoggedIn, function(req, res) {
+    item = req.params.item;
+    res.render('post', data[item]); 
+>>>>>>> bb35f7863832ba11d33cba8c7d3edf3a843024b1
   });
 
   app.get('/items/:item', function(req, res) {
     item = req.params.item;
-      res.render('items', data[item]); 
+    res.render('items', data[item]); 
   });
 
   // Facebook
@@ -58,7 +68,7 @@ module.exports = function(app, passport) {
 };
 
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated())
+  if (req.isAuthenticated() || process.env.NOFACE)
       return next();
   res.redirect('/');
 }

@@ -95,7 +95,7 @@ p {
   font-family: 'Montserrat', sans-serif;
 }
 ul {
-  padding: 0;
+  padding: 0px 0px 0px 40px;
 }
 strong.highlight {
   background: #722881;
@@ -752,6 +752,9 @@ form.search .input-group-addon {
 /************************ General Styles for Header ************************/
 header .row {
   margin: 0px;
+}
+.step {
+  padding-bottom: 25px;
 }
 header .nav .caret {
   border-top-color: #9499af;
