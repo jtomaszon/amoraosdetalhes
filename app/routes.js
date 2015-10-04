@@ -8,7 +8,7 @@ module.exports = function(app, passport) {
     res.render('home');
   });
 
-  app.get('/moldes', function(req, res) {
+  app.get('/moldes', isLoggedIn, function(req, res) {
     res.render('patterns');
   });
 
@@ -23,7 +23,7 @@ module.exports = function(app, passport) {
   // handle the callback after facebook has authenticated the user
   app.get('/auth/facebook/callback',
       passport.authenticate('facebook', {
-          successRedirect : '/',
+          successRedirect : '/moldes',
           failureRedirect : '/'
       }));
 

@@ -13,6 +13,9 @@ var db       = require('./config/database');            // load the database con
 var morgan = require('morgan');                  // log requests to the console
 var bodyParser = require('body-parser');         // pull information from HTML POST
 var methodOverride = require('method-override'); // simulate DELETE and PUT
+var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
 
 // configuration ===============================================================
 mongoose.connect(db.url);
@@ -37,6 +40,12 @@ app.use(function (req, res, next) {
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
+
+// required for passport
+app.use(session({ secret: 'amoraosdetalhesGiuliaZon' }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // routes ======================================================================
 require('./app/routes')(app, passport);
