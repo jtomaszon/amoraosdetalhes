@@ -8,6 +8,7 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated() || process.env.NOFACE) {
     return next();
   }
+  req.session.redirectUrl = req.url;
   res.redirect('/auth/facebook');
 }
 
@@ -35,10 +36,20 @@ module.exports = function (app, passport) {
 
   // handle the callback after facebook has authenticated the user
   app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', {
-      successRedirect : '/blog',
-      failureRedirect : '/'
-    }));
+    passport.authenticate('facebook', function(err, user, info){
+      var redirectUrl = '/blog';
+    
+      if (err) {return next(err); }
+      if (req.session.redirectUrl) {
+        redirectUrl = req.session.redirectUrl;
+        req.session.redirectUrl = null;
+      }
+      req.logIn(user, function(err){
+        if (err) { return next(err); }
+      });
+      res.redirect(redirectUrl);
+    })(req, res, next);
+  });
 
   // route for logging out
   app.get('/logout', function (req, res) {
