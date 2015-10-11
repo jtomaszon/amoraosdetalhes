@@ -17,6 +17,13 @@ module.exports = function (app, passport) {
     res.render('home');
   });
 
+  app.get('/stats', function (req, res) {
+    var User       = require('./models/user');
+    User.count(function(err, result){
+      res.json(result);
+    });
+  });
+    
   app.get('/blog', function (req, res) {
     res.render('blog');
   });
