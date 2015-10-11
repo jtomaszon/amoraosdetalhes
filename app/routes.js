@@ -1,25 +1,33 @@
+/*jslint node: true */
+
 var fs   = require('fs');
 var data = JSON.parse(fs.readFileSync(__dirname + '/../public/data.json', 'utf8'));
 var mail = require('nodemailer');
 
-module.exports = function(app, passport) {
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated() || process.env.NOFACE) {
+    return next();
+  }
+  res.redirect('/auth/facebook');
+}
 
-  app.get('/', function(req, res) {
+module.exports = function (app, passport) {
+  app.get('/', function (req, res) {
     res.render('home');
   });
 
-  app.get('/blog', function(req, res) {
+  app.get('/blog', function (req, res) {
     res.render('blog');
   });
 
-  app.get('/blog/:item', isLoggedIn, function(req, res) {
-    item = req.params.item;
-    res.render('post', data[item]); 
+  app.get('/blog/:item', isLoggedIn, function (req, res) {
+    var item = req.params.item;
+    res.render('post', data[item]);
   });
 
-  app.get('/items/:item', function(req, res) {
-    item = req.params.item;
-    res.render('items', data[item]); 
+  app.get('/items/:item', function (req, res) {
+    var item = req.params.item;
+    res.render('items', data[item]);
   });
 
   // Facebook
@@ -27,19 +35,19 @@ module.exports = function(app, passport) {
 
   // handle the callback after facebook has authenticated the user
   app.get('/auth/facebook/callback',
-      passport.authenticate('facebook', {
-          successRedirect : '/moldes',
-          failureRedirect : '/'
-      }));
+    passport.authenticate('facebook', {
+      successRedirect : '/blog',
+      failureRedirect : '/'
+    }));
 
   // route for logging out
-  app.get('/logout', function(req, res) {
-      req.logout();
-      res.redirect('/');
+  app.get('/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
   });
   // END Facebook
 
-  app.post('/mail', function(req, res){
+  app.post('/mail', function (req, res) {
     var transporter = mail.createTransport({
       service: 'hotmail',
       auth: {
@@ -52,18 +60,14 @@ module.exports = function(app, passport) {
       from: 'amoraosdetalhes@outlook.com.br',
       to: 'amoraosdetalhes@outlook.com.br',
       subject: 'Contato amoraosdetalhes.com',
-      text: req.body.name + " <"+req.body.email+"> " + 'diz:\n' + req.body.message
-    }, function(err, info){
-      if (err) console.log("ERROR Email", err);
+      text: req.body.name + " <" + req.body.email + "> " + 'diz:\n' + req.body.message
+    }, function (err, info) {
+      if (err) {
+        console.log("ERROR Email", err);
+      }
       console.log("EMAIL", info);
       res.json(info);
-    })
-
-  })
+    });
+    
+  });
 };
-
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated() || process.env.NOFACE)
-      return next();
-  res.redirect('/');
-}

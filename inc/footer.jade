@@ -3,7 +3,6 @@ footer
     // begin Contact
     article.contact
       #map
-      |     
       #contact_bg
         .container
           .row
@@ -12,45 +11,33 @@ footer
                 .centered
                   div
                     h2 Contato!
-                |             
                 p Entre em contato, mande para n&oacute;s suas sugest&otilde;es, cr&iacute;ticas e d&uacute;vidas!!
-          |         
           .row
             .col-sm-6
               address
                 i.icon-home
                 |  Guaratingueta, S&atilde;o Paulo
                 br
-                |             
                 i.icon-phone
                 |  Phone:  +55 12 2103 0886
                 br
-                |             
                 i.icon-mail
                 |  Email:  
                 a(href='mailto:amoraosdetalhes@outlook.com.br') amoraosdetalhes@outlook.com.br
                 br
-                |             
                 i.icon-facebook
                 |  Facebook:  
                 a(href='#') facebook.com/amoraosdetalhes
                 br
-            |  
-            |           
             .col-sm-6
                 form#contact-form.form-inline(role='form', action='/mail', method='post', accept-charset='utf-8')
                     .form-group.pull-left
                       label.sr-only(for='name') Name
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       input#name.form-control(type='text', placeholder='Name', name='name')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     .form-group.pull-right
                       label.sr-only(for='email') Email
-                      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                       input#email.form-control(type='email', placeholder='Email', name='email')
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     textarea.form-control.pull-left(rows='8', name='message') Message
-                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
                     input.btn.btn-default.pull-right(type='submit', value='Contact us')
 
     // end Contact
