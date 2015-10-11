@@ -35,7 +35,7 @@ module.exports = function (app, passport) {
   app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
   // handle the callback after facebook has authenticated the user
-  app.get('/auth/facebook/callback',
+  app.get('/auth/facebook/callback', function(req, res, next){
     passport.authenticate('facebook', function(err, user, info){
       var redirectUrl = '/blog';
     
@@ -48,7 +48,7 @@ module.exports = function (app, passport) {
         if (err) { return next(err); }
       });
       res.redirect(redirectUrl);
-    })(req, res, next);
+    })(req, res, next)
   });
 
   // route for logging out
