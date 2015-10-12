@@ -38,9 +38,15 @@
                 <div class="carousel-inner">
                   <div class="item active">
                     <ol>
-                      <li data-target="#carousel-puppie" data-slide-to="0" class="active thumb"><img src="/img/items/{{item.url}}/thumbs/1.jpg"/></li>
-                      <li data-target="#carousel-puppie" data-slide-to="1" class="thumb"><img src="/img/items/{{item.url}}/thumbs/2.jpg"/></li>
-                      <li data-target="#carousel-puppie" data-slide-to="2" class="thumb"><img src="/img/items/{{item.url}}/thumbs/3.jpg"/></li>
+                      <li data-target="#carousel-puppie" data-slide-to="0" class="active thumb">
+                        <img src="/img/items/{{item.url}}/thumbs/1.jpg"/>
+                      </li>
+                      <li data-target="#carousel-puppie" data-slide-to="1" class="thumb">
+                        <img src="/img/items/{{item.url}}/thumbs/2.jpg"/>
+                      </li>
+                      <li data-target="#carousel-puppie" data-slide-to="2" class="thumb">
+                        <img src="/img/items/{{item.url}}/thumbs/3.jpg"/>
+                      </li>
                     </ol>
                   </div>
                 </div>
@@ -56,14 +62,19 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h2>Meus Trabalhos</h2>
+          <h2>Veja também:</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="grid">
             <ul>
-              <li ng-repeat="item in items"><a ng-href="#/items/{{item.url}}"><img data-ng-src="/img/items/{{item.url}}/thumbs/1.jpg"/><span ng-class="name">{{item.name}}</span></a></li>
+              <li ng-repeat="item in items">
+                <a ng-href="#/items/{{item.url}}">
+                  <img data-ng-src="/img/items/{{item.url}}/thumbs/1.jpg"/>
+                  <span ng-class="name">{{item.name}}</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
