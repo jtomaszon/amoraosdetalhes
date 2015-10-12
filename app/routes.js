@@ -13,10 +13,6 @@ function isLoggedIn(req, res, next) {
 }
 
 module.exports = function (app, passport) {
-  app.get('/', function (req, res) {
-    res.render('home');
-  });
-
   app.get('/stats', function (req, res) {
     var User       = require('./models/user');
     User.count(function(err, result){
@@ -31,11 +27,6 @@ module.exports = function (app, passport) {
   app.get('/blog/:item', isLoggedIn, function (req, res) {
     var item = req.params.item;
     res.render('post', data[item]);
-  });
-
-  app.get('/items/:item', function (req, res) {
-    var item = req.params.item;
-    res.render('items', data[item]);
   });
 
   // Facebook
@@ -65,6 +56,7 @@ module.exports = function (app, passport) {
   });
   // END Facebook
 
+  // Email
   app.post('/mail', function (req, res) {
     var transporter = mail.createTransport({
       service: 'hotmail',
@@ -88,4 +80,19 @@ module.exports = function (app, passport) {
     });
     
   });
+  // END Email
+  
+  // API
+  app.get('/api/items', function (req, res) {
+    var item = req.params.item;
+    res.json(data);
+  });
+  
+  app.get('/api/items/:item', function (req, res) {
+    var item = req.params.item;
+    res.json(data[item]);
+  });
+  // End API
+
+
 };

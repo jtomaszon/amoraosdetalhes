@@ -1,7 +1,17 @@
-var Amor = angular.module('Amor', []);
-Amor.controller('ItemsController', function($scope, $http) {
-    $http.get('/data.json')
-      .then(function(res){
-        $scope.items = res.data;
+(function(){
+  var Amor = angular.module('Amor', ['ngRoute']);
+
+  Amor.config(function($routeProvider) {
+    $routeProvider
+      .when('/', {
+        controller: 'ItemsController',
+        templateUrl: 'app/views/home.html'
       })
+      .when('/items/:itemName', {
+        controller: 'ItemsController',
+        templateUrl: 'app/views/item.html'
+      })
+      .otherwise( { redirectTo: '/' });
   });
+
+}());

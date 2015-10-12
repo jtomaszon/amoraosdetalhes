@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+  <meta charset="utf-8">
+  <title>Amor aos Detalhes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="author" content="kbit.io">
+  <meta name="keywords" content="feltro, fofuras, banguela, anjinha, decoração aniversários, decoração festa infantil, decorações infantis, decoração de festas, festas infantis">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/fontello.css">
+  <link rel="stylesheet" href="/plugins/grid/css/component.css">
+  <link rel="stylesheet" href="/plugins/revolution/css/settings.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/media-queries.css">
+</head>
+<!-- end Header-->
+<body ng-app="Amor">
+  <div id='fb-root'></div>
+
+  <header>
+    <nav role="navigation" class="navbar">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display-->
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button><a href="/#/" class="navbar-brand"><img src="/img/logo.png" alt="Logo"/></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling-->
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/#/">Home</a></li>
+            <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Trabalhos<span class="caret"></span></a>
+              <ul class="dropdown-menu" ng-controller="ItemsController" >
+                <li ng-repeat="item in items"><a ng-href="/#/items/{{item.url}}">{{item.name}}</a></li>
+              </ul>
+            </li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook">Facebook</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <div class="content" ng-view></div>
+
+  <script src="/js/angular.min.js"></script>
+  <script src="/js/angular-route.min.js"></script>
+  
+  <script src="/app/amor.js"></script>
+  <script src="/app/services/itemsFactory.js"></script>
+  <script src="/app/controllers/itemsController.js"></script>
+  
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/script.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68423801-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
