@@ -45,8 +45,7 @@ module.exports = function(passport) {
             newUser.id    = profile.id;
             newUser.token = token;
             newUser.name  = profile.name.givenName + ' ' + profile.name.familyName;
-            newUser.email = profile.emails[0].value;
-
+            newUser.email = (typeof profile.emails === 'undefined') ? '' : profile.emails[0].value;
 
             newUser.save(function(err) {
                 if (err)
