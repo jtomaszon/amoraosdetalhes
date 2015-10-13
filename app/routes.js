@@ -131,7 +131,7 @@ module.exports = function (app, passport) {
             console.log("ERROR Email", err);
           }
           User.update({ 'email' : user.email }, { halloween : true }, function(err, user) {
-            console.log(user.email + 'was updated');
+            console.log(info.accepted[0] + ' was updated');
           });
 
           console.log("EMAIL", info);
