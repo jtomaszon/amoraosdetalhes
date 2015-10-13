@@ -4,6 +4,9 @@ var fs   = require('fs');
 var data = JSON.parse(fs.readFileSync(__dirname + '/../public/data.json', 'utf8'));
 var mail = require('nodemailer');
 
+var sendgrid       = require('sendgrid')(process.env.SENDGRID_APIUSER, process.env.SENDGRID_APIPASS);
+
+
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated() || process.env.NOFACE) {
     return next();
@@ -96,60 +99,50 @@ module.exports = function (app, passport) {
 
 
   app.get('/newsletter', function (req, res) {
-    var User       = require('./models/user');
-
+    var User        = require('./models/user');
+    
     User.find({$and:[{ email : { $ne : '' }, halloween : false }]}, {email: 1, name: 1}, function(err, users){
   
-      users.forEach(function(user){
-        console.log(user.email);
-        var transporter = mail.createTransport({
-          service: 'gmail',
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-          }
-        });
-
-        var message = "Olá " + user.name + "\n\n" +
-          "Muito obrigada por curtir e se cadastrar no meu novo site (<3) \n" +
-          "Espero que tenha gostado de tudo, pois em cada detalhe tem muito amor.\n" + 
-          "Segue o link para download do PDF com o molde de presente para o Halloween: \n\n" +
-          "http://amoraosdetalhes.com.br/downloads/MoldesHalloween.pdf \n\n" +
-          "Sei que de Horripilante essas fofuras não tem nada, rs \n" +
-          "Mas você pode soltar a criatividade e criar peças lindas com esses moldes! <3 \n\n" +
-          "Aproveite e não se esqueça de me contar o que achou e se quiser pode compartilhar as suas criações, vou adorar conhecer o seu trabalho! <3 \n\n" +
-          "Beijos iluminados e tenha uma linda semana! \n\n" +
-          "Giulia.\n";
-
-        transporter.sendMail({
-          from: 'amoraosdetalhes@outlook.com.br',
-          to: user.email,
-          subject: 'Amor aos Detalhes: Presente de Halloween',
-          text: message
-        }, function (err, info) {
-          if (!err) {
-            User.update({ 'email' : user.email }, { halloween : true }, function(err, user) {
-              console.log(info.accepted[0] + ' was updated');
-            });
-
-            console.log("EMAIL", info);
-          } else {
-            console.log("ERROR Email", err);
-          }
-        });     
-
-        
-      });
-
       if (users.length == 0) {
         res.send( { "status" : "nothing to send" } );
       }else {
-        res.json({ status: 200 });
-      }
+
+        users.forEach(function(user){
+          var email       = new sendgrid.Email();
+          var message = "Olá " + user.name + "<br /><br />" +
+            "Muito obrigada por curtir e se cadastrar no meu novo site (<3) <br />" +
+            "Espero que tenha gostado de tudo, pois em cada detalhe tem muito amor.<br />" + 
+            "Segue o link para download do PDF com o molde de presente para o Halloween: <br /><br />" +
+            "http://amoraosdetalhes.com.br/downloads/MoldesHalloween.pdf <br /><br />" +
+            "Sei que de Horripilante essas fofuras não tem nada, rs <br />" +
+            "Mas você pode soltar a criatividade e criar peças lindas com esses moldes! <3 <br /><br />" +
+            "Aproveite e não se esqueça de me contar o que achou e se quiser pode compartilhar as suas criações, vou adorar conhecer o seu trabalho! <3 <br /><br />" +
+            "Beijos iluminados e tenha uma linda semana! <br /><br />" +
+            "Giulia.<br />";
+
+          email.addTo(user.email);
+          email.setFrom('info@amoraosdetalhes.com.br');
+          email.setFromName('Amor aos Detalhes Artesanato');
+          email.setSubject('Amor aos Detalhes: Presente de Halloween');
+          email.setHtml(message);
+
+          sendgrid.send(email, function(err, json){
+            if (err) { return console.error(err); }
+
+            User.findOneAndUpdate({ 'email' : user.email }, { halloween : true }, function(err, user) {
+              console.log(user.email + ' was updated');
+            });
+
+            res.json({ status: "emails " + users.length + " was sucefully sent" });
+
+          });
+
+        });
+        
+      };
         
     });
     
   });
 
-  
 };

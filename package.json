@@ -17,6 +17,7 @@
     "morgan": "^1.6.1",
     "nodemailer": "^1.5.0",
     "passport": "latest",
-    "passport-facebook": "latest"
+    "passport-facebook": "latest",
+    "sendgrid": "^1.9.2"
   }
 }
