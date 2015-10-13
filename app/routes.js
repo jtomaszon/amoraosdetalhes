@@ -98,7 +98,7 @@ module.exports = function (app, passport) {
   app.get('/newsletter', function (req, res) {
     var User       = require('./models/user');
 
-    User.find({$and:[{ email : '' , halloween : false }]}, {email: 1, name: 1}, function(err, users){
+    User.find({$and:[{ email : { $ ne : '' }, halloween : false }]}, {email: 1, name: 1}, function(err, users){
   
       users.forEach(function(user){
         console.log(user.email);
@@ -131,11 +131,9 @@ module.exports = function (app, passport) {
             console.log("ERROR Email", err);
           }
           console.log("EMAIL", info);
-          User.update({ 'email' : user.email }, { halloween : true }, function(err, user) {
-            console.log(user.email + 'was updated');
-          });
         });     
 
+        
       });
 
       if (users.length == 0) {
