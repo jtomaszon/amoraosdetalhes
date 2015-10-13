@@ -59,7 +59,7 @@ module.exports = function (app, passport) {
   // Email
   app.post('/mail', function (req, res) {
     var transporter = mail.createTransport({
-      service: 'hotmail',
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS
@@ -67,10 +67,10 @@ module.exports = function (app, passport) {
     });
 
     transporter.sendMail({
-      from: 'amoraosdetalhes@outlook.com.br',
-      to: 'amoraosdetalhes@outlook.com.br',
+      from: 'info@amoraosdetalhes.com.br',
+      to: 'info@amoraosdetalhes.com.br',
       subject: 'Contato amoraosdetalhes.com',
-      text: req.body.name + " <" + req.body.email + "> " + 'diz:\n' + req.body.message
+      text: req.body.name + " <" + req.body.email + "> " + 'diz: \n' + req.body.message
     }, function (err, info) {
       if (err) {
         console.log("ERROR Email", err);
@@ -103,7 +103,7 @@ module.exports = function (app, passport) {
       users.forEach(function(user){
         console.log(user.email);
         var transporter = mail.createTransport({
-          service: 'hotmail',
+          service: 'gmail',
           auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
