@@ -98,7 +98,7 @@ module.exports = function (app, passport) {
   app.get('/newsletter', function (req, res) {
     var User       = require('./models/user');
 
-    User.find({ halloween : false }, {email: 1, name: 1}, function(err, users){
+    User.find({$and:[{ email : '' , halloween : false }]}, {email: 1, name: 1}, function(err, users){
   
       users.forEach(function(user){
         console.log(user.email);
