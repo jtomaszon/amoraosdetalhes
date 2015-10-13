@@ -127,14 +127,15 @@ module.exports = function (app, passport) {
           subject: 'Amor aos Detalhes: Presente de Halloween',
           text: message
         }, function (err, info) {
-          if (err) {
+          if (!err) {
+            User.update({ 'email' : user.email }, { halloween : true }, function(err, user) {
+              console.log(info.accepted[0] + ' was updated');
+            });
+
+            console.log("EMAIL", info);
+          } else {
             console.log("ERROR Email", err);
           }
-          User.update({ 'email' : user.email }, { halloween : true }, function(err, user) {
-            console.log(info.accepted[0] + ' was updated');
-          });
-
-          console.log("EMAIL", info);
         });     
 
         
