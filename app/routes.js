@@ -27,9 +27,17 @@ module.exports = function (app, passport) {
     res.render('blog');
   });
 
-  app.get('/blog/:item', isLoggedIn, function (req, res) {
+  app.get('/blog/1', isLoggedIn, function (req, res) {
+    res.redirect('/blog/peru-de-natal');
+  });
+
+  app.get('/blog/peru-de-natal', isLoggedIn, function (req, res) {
+    res.render('peru');
+  });
+
+  app.get('/blog/bailarina-bebe', isLoggedIn, function (req, res) {
     var item = req.params.item;
-    res.render('post', data[item]);
+    res.render('bailarina');
   });
 
   // Facebook
