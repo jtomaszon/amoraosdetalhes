@@ -16,6 +16,11 @@ function isLoggedIn(req, res, next) {
 }
 
 module.exports = function (app, passport) {
+  
+  app.get('/downloads/MoldesHalloween.pdf', function(req, res) {
+    res.redirect('https://s3-sa-east-1.amazonaws.com/amoraosdetalhes.com.br/downloads/MoldesHalloween.pdf');
+  });
+  
   app.get('/stats', function (req, res) {
     var User       = require('./models/user');
     User.count(function(err, result){
@@ -36,7 +41,6 @@ module.exports = function (app, passport) {
   });
 
   app.get('/blog/bailarina-bebe', isLoggedIn, function (req, res) {
-    var item = req.params.item;
     res.render('bailarina');
   });
 
