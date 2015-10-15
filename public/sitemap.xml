@@ -5,57 +5,72 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>http://amoraosdetalhes.com.br/</loc>
+  <loc>http://amoraosdetalhes.com.br/#/</loc>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/banguela</loc>
+  <loc>http://amoraosdetalhes.com.br/blog/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://amoraosdetalhes.com.br/#/items/banguela</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/anjinha</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/anjinha</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/passarinha</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/passarinha</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/burro</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/burro</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/leao</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/leao</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/girafa</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/girafa</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/panda</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/panda</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/guaxinim</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/guaxinim</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/dragao</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/dragao</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://amoraosdetalhes.com.br/items/vaquinha</loc>
+  <loc>http://amoraosdetalhes.com.br/#/items/vaquinha</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://amoraosdetalhes.com.br/blog/peru-de-natal</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://amoraosdetalhes.com.br/blog/bailarina-bebe</loc>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
