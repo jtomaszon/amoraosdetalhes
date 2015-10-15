@@ -1,5 +1,6 @@
 /*jslint node: true */
 // set up ======================================================================
+require('newrelic');
 var express  = require('express');
 var compress = require('compression');
 var app      = express();                               // create our app w/ express
