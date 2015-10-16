@@ -44,6 +44,14 @@ module.exports = function (app, passport) {
     res.render('bailarina');
   });
 
+  app.get('/blog/presentes-bebes', isLoggedIn, function (req, res) {
+    res.render('presentes-bebes');
+  });
+
+  app.get('/blog/presentes-halloween', isLoggedIn, function (req, res) {
+    res.render('presentes-halloween');
+  });
+
   // Facebook
   app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
