@@ -52,6 +52,10 @@ module.exports = function (app, passport) {
     res.render('presentes-halloween');
   });
 
+  app.get('/blog/princess-bela', isLoggedIn, function (req, res) {
+    res.render('princess-bela');
+  });
+
   // Facebook
   app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
