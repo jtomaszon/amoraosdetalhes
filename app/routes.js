@@ -122,49 +122,49 @@ module.exports = function (app, passport) {
   // End API
 
 
-  app.get('/newsletter', function (req, res) {
-    var User        = require('./models/user');
-    
-    User.find({$and:[{ email : { $ne : '' }, halloween : false }]}, {email: 1, name: 1}, function(err, users){
-  
-      if (users.length == 0) {
-        res.send( { "status" : "nothing to send" } );
-      }else {
-        res.json({ status: "emails " + users.length + " was sucefully sent" });
-      }
-
-      users.forEach(function(user){
-        var email       = new sendgrid.Email();
-        var message = "Olá " + user.name + "<br /><br />" +
-          "Muito obrigada por curtir e se cadastrar no meu novo site (<3) <br />" +
-          "Espero que tenha gostado de tudo, pois em cada detalhe tem muito amor.<br />" + 
-          "Segue o link para download do PDF com o molde de presente para o Halloween: <br /><br />" +
-          "http://amoraosdetalhes.com.br/downloads/MoldesHalloween.pdf <br /><br />" +
-          "Sei que de Horripilante essas fofuras não tem nada, rs <br />" +
-          "Mas você pode soltar a criatividade e criar peças lindas com esses moldes! <3 <br /><br />" +
-          "Aproveite e não se esqueça de me contar o que achou e se quiser pode compartilhar as suas criações, vou adorar conhecer o seu trabalho! <3 <br /><br />" +
-          "Beijos iluminados e tenha uma linda semana! <br /><br />" +
-          "Giulia.<br />";
-
-        email.addTo(user.email);
-        email.setFrom('info@amoraosdetalhes.com.br');
-        email.setFromName('Amor aos Detalhes Artesanato');
-        email.setSubject('Amor aos Detalhes: Presente de Halloween');
-        email.setHtml(message);
-
-        sendgrid.send(email, function(err, json){
-          if (err) { return console.error(err); }
-
-          User.findOneAndUpdate({ 'email' : user.email }, { halloween : true }, function(err, user) {
-            console.log(user.email + ' was updated');
-          });
-
-        });
-        
-      });
-   
-    });
-    
-  });
+//  app.get('/newsletter', function (req, res) {
+//    var User        = require('./models/user');
+//    
+//    User.find({$and:[{ email : { $ne : '' }, halloween : false }]}, {email: 1, name: 1}, function(err, users){
+//  
+//      if (users.length == 0) {
+//        res.send( { "status" : "nothing to send" } );
+//      }else {
+//        res.json({ status: "emails " + users.length + " was sucefully sent" });
+//      }
+//
+//      users.forEach(function(user){
+//        var email       = new sendgrid.Email();
+//        var message = "Olá " + user.name + "<br /><br />" +
+//          "Muito obrigada por curtir e se cadastrar no meu novo site (<3) <br />" +
+//          "Espero que tenha gostado de tudo, pois em cada detalhe tem muito amor.<br />" + 
+//          "Segue o link para download do PDF com o molde de presente para o Halloween: <br /><br />" +
+//          "http://amoraosdetalhes.com.br/downloads/MoldesHalloween.pdf <br /><br />" +
+//          "Sei que de Horripilante essas fofuras não tem nada, rs <br />" +
+//          "Mas você pode soltar a criatividade e criar peças lindas com esses moldes! <3 <br /><br />" +
+//          "Aproveite e não se esqueça de me contar o que achou e se quiser pode compartilhar as suas criações, vou adorar conhecer o seu trabalho! <3 <br /><br />" +
+//          "Beijos iluminados e tenha uma linda semana! <br /><br />" +
+//          "Giulia.<br />";
+//
+//        email.addTo(user.email);
+//        email.setFrom('info@amoraosdetalhes.com.br');
+//        email.setFromName('Amor aos Detalhes Artesanato');
+//        email.setSubject('Amor aos Detalhes: Presente de Halloween');
+//        email.setHtml(message);
+//
+//        sendgrid.send(email, function(err, json){
+//          if (err) { return console.error(err); }
+//
+//          User.findOneAndUpdate({ 'email' : user.email }, { halloween : true }, function(err, user) {
+//            console.log(user.email + ' was updated');
+//          });
+//
+//        });
+//        
+//      });
+//   
+//    });
+//    
+//  });
 
 };
