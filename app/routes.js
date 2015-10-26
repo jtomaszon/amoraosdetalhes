@@ -55,6 +55,10 @@ module.exports = function (app, passport) {
   app.get('/blog/princess-bela', isLoggedIn, function (req, res) {
     res.render('princess-bela');
   });
+  
+  app.get('/blog/bonecas', isLoggedIn, function (req, res) {
+    res.render('bonecas');
+  });
 
   // Facebook
   app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
