@@ -1,6 +1,7 @@
-(function(){
+(function () {
 
-  var ItemsController = function($scope, $routeParams, itemsFactory) {
+  'use strict';
+  var ItemsController = function ($scope, $routeParams, itemsFactory) {
 
     var itemName = $routeParams.itemName;
     $scope.items = [];
@@ -8,24 +9,24 @@
     
     function init() {
       itemsFactory.getItems()
-        .success(function(items) {
+        .success(function (items) {
           $scope.items = items;
         })
-        .error(function(data, status) {
+        .error(function (data, status) {
           //handle error
         });
 
       if (typeof itemName !== 'undefined') {
         itemsFactory.getItem(itemName)
-          .success(function(item) {
+          .success(function (item) {
             $scope.item = item;
           })
-          .error(function(data, status) {
+          .error(function (data, status) {
             //handle error
-          });  
-      };
+          });
+      }
       
-    };
+    }
     
     init();
     

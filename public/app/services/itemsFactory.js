@@ -1,15 +1,16 @@
-(function() {
-  
-  var itemsFactory = function($http) {
+(function () {
+
+  'use strict';
+  var itemsFactory = function ($http) {
     
     var factory = {};
     
-    factory.getItems = function() {
-      return $http.get('/api/items')
+    factory.getItems = function () {
+      return $http.get('/api/items');
     };
     
-    factory.getItem = function(itemName) {
-      return $http.get('/api/items/' + itemName)
+    factory.getItem = function (itemName) {
+      return $http.get('/api/items/' + itemName);
     };
 
     return factory;
