@@ -11,6 +11,9 @@
         controller: 'ItemsController',
         templateUrl: 'app/views/item.html'
       })
+      .when('/privacy', {
+        templateUrl: 'app/views/privacy.html'
+      })
       .otherwise( { redirectTo: '/' });
   });
 
