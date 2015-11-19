@@ -1,0 +1,57 @@
+extend layout
+
+block facebook
+  meta(property='og:image', content='http://amoraosdetalhes.com.br/img/blog/sagrada-familia/thumb.jpg')
+  meta(property='og:image:type', content='image/jpeg')
+  meta(property='og:type', content='article')
+  meta(property='article:author', content='Giulia Santos Souza Zon')
+  meta(property='article:author', content='giulia.santos1')
+  meta(property='article:section', content='Blog')
+  meta(property='article:tag', content='feltro,fofuras,detalhes')
+  meta(property='article:tag', content='feltro')
+  meta(property='article:tag', content='fofuras')
+  meta(property='article:tag', content='detalhes')
+  meta(property='article:tag', content='sagrada')
+  meta(property='article:tag', content='familia')
+
+block content
+  // Blog
+  section#blog.updatable
+      article
+        .container
+          .row
+            .col-xs-12
+              h2.header Blog: Amor aos Detalhes
+          .row.post
+            .col-md-9
+              // Post 01
+              .eachpost
+                .title
+                  .centered
+                    div
+                      h2 Presente Divino: Sagrada Família 
+                  .clearfix
+                  p
+                    | Quarta-feira, 18 de Novembro
+                    i.icon-dot
+                    |  Posted by Giulia
+
+                .post-img
+                  img.thumbnail(src='/img/blog/sagrada-familia/thumb.jpg')
+                p Boa Noite!!
+                p Preparei a versão Amor aos Detalhes da Sagrada Família e fiquei muito encantada com o resultado.
+                p Como são várias peças não consegui fazer o passo a passo, mas fico a disposição para tirar qualquer 
+                  | dúvida através da página do facebook 
+                  a(href='www.faceboo.com/amoraosdetalhes') Amor aos Detalhes 
+                  | ou pelo email 
+                  a(href='mailto:info@amoraosdetalhes.com.br') info@amoraosdetalhes.com.br
+                p Espero de coração ajudar vocês a criarem lindas peças. Um grande beijos e até a próxima edição! :*
+            .col-md-3
+              p Download dos moldes
+              .recent-news
+                a(href="https://s3-sa-east-1.amazonaws.com/amoraosdetalhes.com.br/downloads/SagradaFamilia.pdf") 
+                  span.glyphicon.glyphicon-download-alt SagradaFamilia.pdf
+
+          .row
+            .col-md-12.text-center
+              img.img-thumbnail(src="/img/blog/sagrada-familia/big.jpg")

@@ -60,6 +60,10 @@ module.exports = function (app, passport) {
     res.render('bonecas');
   });
 
+  app.get('/blog/sagrada-familia', isLoggedIn, function (req, res) {
+    res.render('sagrada-familia');
+  });
+
   // Facebook
   app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
 
